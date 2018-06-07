@@ -13,6 +13,24 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+//RUTAS PARA CLIENTES
+
+//RUTAS PARA LOS ROLES
+
+//RUTAS PARA LOS USUARIOS
+
+//RUTAS PARA PERSONAS
+
+//RUTAS PARA VALLAS
+
+//RUTAS PARA ESTRUCTURAS
+
+//RUTAS PARA LUGARES
+
+//RUTA PARA MATERIALES
+
+//RUTA PARA LAS PAUTAS
