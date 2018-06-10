@@ -3,8 +3,12 @@ var app = new Framework7({
     root:'#Ejemplo',
     routes: [
         {
-          path: '/about/',
-          url: 'about.html',
+          path: '/Menu/',
+          url: 'Menu.html',
+        },
+        {
+            path: '/LogIn/',
+            url: 'index.html',
         },
     ],
 });
