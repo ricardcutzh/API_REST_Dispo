@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="Ejemplo">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+
+        <div data-name="index" class="page">
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="title">Demo Disponibilidad</div>
+                </div>
+            </div>
+
+            <div class="page-content">
+
+                <div class="block">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-content card-content-padding">
+                                    <center><img src="imgs/us.png"  width="100%"></center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <!--<div class="card">
+                        <div class="card-content card-content-padding">
+                           <center><img src="imgs/us.png"  width="50%"></center>
+                        </div>
+                    </div>-->
+                    
+                    <div class="card">
+                        <div class="card-header">Log In</div>
+                        <div class="list" id="mi-form">
+                            <ul>
+                                <li>
+                                    <div class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Usuario</div>
+                                            <div class="item-input-wrap">
+                                                <input type="text" name="user" placeholder="Usuario">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Password</div>
+                                            <div class="item-input-wrap">
+                                                <input type="password" name="password" placeholder="Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row"></div>
+
+                    <div class="card">
+                        <div class="block block-strong row">
+                            <div class="col"><a class="col button button-fill button-round" href="#">Ingresar</a></div>
+                            <div class="col"><a class="col button button-fill button-round" href="#">Salir</a></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/miapp.js"></script>
+  </body>
+</html>
