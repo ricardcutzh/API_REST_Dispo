@@ -1,22 +1,102 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
+/*
+ **********************************************
+ * TODOS LOS IMPORT
+ **********************************************
  */
+import Vue from 'vue';
+/*
+------------------------------------
+Framework 7
+------------------------------------
+*/
 
-require('./bootstrap');
+import Framework7Vue from 'framework7-vue-2.2.5/dist/framework7-vue.esm.bundle.js'
+//import Framework7Vue from 'framework7-vue-2.2.5'
+import Framework7 from 'framework7-vue-2.2.5/node_modules/framework7/dist/framework7.esm.bundle.js'
 
-window.Vue = require('vue');
+import CssVuetify from 'framework7-vue-2.2.5/node_modules/framework7/dist/css/framework7.css'; 
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
+
+Vue.use(Framework7Vue, Framework7);
+
+//import { f7List, f7ListItem, f7Navbar } from 'framework7-vue-2.2.5';
+/*
+------------------------------------
+Para las rutas de vue
+------------------------------------
+*/
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
+
+/*
+------------------------------------
+Para los request
+------------------------------------
+*/
+import VueAxios from 'vue-axios';
+import axios from 'axios';
+Vue.use(VueAxios, axios);
+/*
+------------------------------------
+Para imprimir en consola
+------------------------------------
+*/
+const options = {
+    logLevel: 'debug',
+    stringifyArguments: false,
+    showLogLevel: false
+}
+
+import VueLogger from 'vuejs-logger'
+Vue.use(VueLogger, options)
+/*
+ **********************************************
+ * LAS VISTAS
+ **********************************************
  */
+import master from './home/master2.vue'
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+/*
+ **********************************************
+ * LAS RUTAS
+ **********************************************
+ */
+const routes = [{
+    name: 'master',
+    path: '/',
+    component: master
+}];
 
-const app = new Vue({
-    el: '#app'
+
+/*
+ **********************************************
+ * APP
+ **********************************************
+ */
+const router = new VueRouter({
+    mode: 'history',
+    routes: routes
 });
+
+new Vue(Vue.util.extend({
+    router
+}, master)).$mount('#app');
+
+var app = new Framework7({
+        root: '#app',
+        theme: 'ios',
+    },
+    Vue.util.extend({
+            router
+        },
+        master));
+
+
+/* new Vue({
+    el: '#app',
+    framework7: {
+      routes: routes
+    },
+    // ...
+  }).$mount('#app'); */
